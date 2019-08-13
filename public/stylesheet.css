@@ -1,0 +1,107 @@
+@font-face {
+  font-family: fancy;
+  src: url('/fonts/PTSerif.ttf');
+}
+
+@font-face {
+  font-family: regular;
+  src: url('/fonts/Montserrat.ttf');
+}
+
+:root {
+	--primary-light: #AAA;
+	--primary-dark: #222;
+	--secondary-light: #EEE;
+	--secondary-dark: #333;
+	--accent-light: #FF9900;
+	--accent-dark: #BB5000;
+}
+
+
+* {
+	box-sizing: content-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--primary-dark);
+	color: var(--primary-light);
+	font-family: regular;
+}
+
+h1, h2, h3 {
+	font-family: fancy;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: var(--secondary-light);
+}
+
+#heading {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	height: 10rem;
+	padding: 1rem;
+	background-image: url(http://deathsmessenger.tinypurplegrapes.com/UserData/deathsmessenger/BannerImage.png);
+	background-size: cover;
+}
+
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: solid 2px var(--accent-light);
+	list-style: none;
+}
+
+.navigation li {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.navigation li a {
+	display: block;
+	width: 100%;
+}
+
+.navigation li:hover {
+	opacity: 0.5;
+}
+
+.current-page {
+	color: var(--accent-dark);
+}
+
+#footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+}
+
+#footer {
+	margin-top: 1rem;
+	text-align: center;
+	border-top: solid 2px var(--accent-light);
+}
+
+#footer .navigation {
+	border-bottom: none;
+}
+
+#footer .navigation li:not(:last-child) { 
+    border-right: solid 2px var(--accent-light);
+}
+
+#footer .right span {
+	display: block;
+}
